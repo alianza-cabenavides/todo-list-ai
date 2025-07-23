@@ -27,6 +27,11 @@ La aplicación es una herramienta básica para gestionar tareas pendientes. Perm
     * Cuando una tarea se marca como completada, debe haber una **indicación visual clara** (ej. tachado del texto de la tarea, cambio de color del texto o del fondo).
     * Al desmarcar una tarea completada, debe volver a su estado "pendiente" y la indicación visual debe desaparecer.
 
+* **Limpieza de Tareas Completadas**:
+    * El usuario debe poder eliminar todas las tareas que estén marcadas como completadas mediante un botón específico ("Limpiar completadas").
+    * Al hacer clic en este botón, todas las tareas completadas se eliminan de la lista y del almacenamiento.
+    * La interfaz debe actualizarse inmediatamente para reflejar la eliminación de las tareas.
+
 ### 2.2. Persistencia de Datos
 
 * Las tareas deben **guardarse en el navegador** utilizando **`localStorage`** para que persistan incluso si el usuario cierra y vuelve a abrir la aplicación o refresca la página.

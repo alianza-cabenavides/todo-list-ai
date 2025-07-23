@@ -4,6 +4,7 @@
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
+const clearCompletedBtn = document.getElementById('clear-completed');
 
 let tasks = [];
 
@@ -59,7 +60,15 @@ function toggleTask(idx) {
   renderTasks();
 }
 
+// Limpiar tareas completadas
+function clearCompletedTasks() {
+  tasks = tasks.filter(task => !task.completed);
+  saveTasks();
+  renderTasks();
+}
+
 // Inicialización
 loadTasks();
 renderTasks();
 taskForm.addEventListener('submit', addTask);
+clearCompletedBtn.addEventListener('click', clearCompletedTasks);
